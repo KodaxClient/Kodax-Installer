@@ -19,7 +19,7 @@ public class WelcomeSlide extends AbstractSlide {
             icon.setBounds((InstallerMain.width - 242) / 2, 40, 242, 89);
             frame.add(icon);
 
-            JButton continueButton = new JButton("Install Now");
+            JButton continueButton = new JButton("Continue");
             continueButton.setBounds((InstallerMain.width - 120) / 2, 160, 130, 50);
             continueButton.addActionListener(e -> InstallerMain.advance());
             SwingUtil.decorate(continueButton);

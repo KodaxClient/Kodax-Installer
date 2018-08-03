@@ -3,6 +3,7 @@ package me.kodingking.installer;
 import mdlaf.MaterialLookAndFeel;
 import me.kodingking.installer.slide.AbstractSlide;
 import me.kodingking.installer.slide.impl.InstallingSlide;
+import me.kodingking.installer.slide.impl.SettingsSlide;
 import me.kodingking.installer.slide.impl.WelcomeSlide;
 import me.kodingking.installer.utils.SwingUtil;
 
@@ -36,6 +37,7 @@ public class InstallerMain {
 
         slides = Arrays.asList(
                 new WelcomeSlide(),
+                new SettingsSlide(),
                 new InstallingSlide()
         );
 
