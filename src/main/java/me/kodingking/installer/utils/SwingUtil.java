@@ -21,7 +21,7 @@ public class SwingUtil {
         bar.setLocation(0, 0);
         bar.setLayout(new GridLayout(1, 4));
 
-        JLabel titleLabel = new JLabel("Project XENON Installer");
+        JLabel titleLabel = new JLabel("Kodax Installer");
         titleLabel.setSize(200, 30);
         bar.add(titleLabel);
 

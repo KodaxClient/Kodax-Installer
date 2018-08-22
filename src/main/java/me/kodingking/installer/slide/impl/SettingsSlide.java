@@ -18,6 +18,12 @@ public class SettingsSlide extends AbstractSlide {
         optifineCheckbox.setHorizontalAlignment(SwingConstants.CENTER);
         frame.add(optifineCheckbox);
 
+        JCheckBox betaCheckbox = new JCheckBox("Use Beta", Settings.USE_BETA);
+        betaCheckbox.setBounds(InstallerMain.width / 2 - 150, 70, 300, 20);
+        betaCheckbox.addActionListener(e -> Settings.USE_BETA = betaCheckbox.isSelected());
+        betaCheckbox.setHorizontalAlignment(SwingConstants.CENTER);
+        frame.add(betaCheckbox);
+
         JButton continueButton = new JButton("Install Now");
         continueButton.setBounds((InstallerMain.width - 120) / 2, 160, 130, 50);
         continueButton.addActionListener(e -> InstallerMain.advance());

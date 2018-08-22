@@ -15,7 +15,7 @@ public class WelcomeSlide extends AbstractSlide {
     public void initialize(JFrame frame) {
         try {
             JLabel icon = new JLabel();
-            icon.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/icon/xenon_logo_cropped.png")).getScaledInstance(242, 89, Image.SCALE_DEFAULT)));
+            icon.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/icon/square_logo_fullwidth.png")).getScaledInstance(242, 55, Image.SCALE_DEFAULT)));
             icon.setBounds((InstallerMain.width - 242) / 2, 40, 242, 89);
             frame.add(icon);
 

@@ -11,11 +11,12 @@ import java.net.URL;
 public class Manifest {
 
     private String latestBuild;
-    private URL buildDownload;
+    private URL buildDownload, latestBetaDownload;
 
-    public Manifest(String latestBuild, URL buildDownload) {
+    public Manifest(String latestBuild, URL buildDownload, URL latestBetaDownload) {
         this.latestBuild = latestBuild;
         this.buildDownload = buildDownload;
+        this.latestBetaDownload = latestBetaDownload;
     }
 
     public String getLatestBuild() {
@@ -24,6 +25,10 @@ public class Manifest {
 
     public URL getBuildDownload() {
         return buildDownload;
+    }
+
+    public URL getLatestBetaDownload() {
+        return latestBetaDownload;
     }
 
     public static Manifest fetch(String urlToRead) {
@@ -40,7 +45,7 @@ public class Manifest {
             rd.close();
             JsonObject object = new JsonParser().parse(result.toString()).getAsJsonObject();
             JsonObject metaObj = object.getAsJsonObject("meta");
-            return new Manifest(metaObj.get("latestBuild").getAsString(), new URL(metaObj.get("latestDownload").getAsString()));
+            return new Manifest(metaObj.get("latestBuild").getAsString(), new URL(metaObj.get("latestDownload").getAsString()), new URL(metaObj.get("latestBetaDownload").getAsString()));
         } catch (Exception e) {
             System.out.println("Error reading manifest...");
             return null;

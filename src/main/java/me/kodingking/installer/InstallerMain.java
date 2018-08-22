@@ -41,14 +41,14 @@ public class InstallerMain {
                 new InstallingSlide()
         );
 
-        frame = new JFrame("Project XENON Installer");
+        frame = new JFrame("Kodax Installer");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         frame.setUndecorated(true);
         frame.setLayout(null);
 
         try {
-            frame.setIconImage(ImageIO.read(InstallerMain.class.getResourceAsStream("/icon/x_logo.png")));
+            frame.setIconImage(ImageIO.read(InstallerMain.class.getResourceAsStream("/icon/icon.png")));
         } catch (IOException ignored) {
         }
 
