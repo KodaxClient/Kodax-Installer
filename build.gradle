@@ -23,4 +23,6 @@ jar {
     manifest.attributes(
             'Main-Class': 'me.kodingking.installer.InstallerMain'
     )
+
+
 }
